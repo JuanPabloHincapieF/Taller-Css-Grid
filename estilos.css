@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+}
+
+.container-principal {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu menu main main main ."
+    "footer footer footer footer footer .";
+}
+.header {
+  grid-area: header;
+  background-color: #000;
+  position: relative;
+  height: 80px;
+}
+.header .logo {
+  position: absolute;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.header .avatar {
+  width: 50px;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  margin: 15px;
+  border-radius: 50%;
+}
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-auto-rows: 200px;
+  grid-gap: 7px;
+  position: relative;
+  justify-content: center;
+  padding: 20px;
+}
+.main img {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s;
+}
+.main img:hover {
+  transform: translateY(-5px) scale(1.06);
+}
+.main img:first-child {
+  grid-column: 1 / span 3;
+  width: 100%;
+}
+.main img:nth-child(10) {
+  grid-column: 4;
+  grid-row: 3 / span 3;
+}
+.main img:nth-child(14) {
+  grid-column: 1 / span 2;
+  width: 100%;
+}
+.aside {
+  grid-area: menu;
+  background-color: #000;
+  color: #fff;
+  font-family: "Courier Prime", monospace;
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  text-align: center;
+}
+.aside h2 {
+  text-decoration: underline dotted #fff;
+}
+.footer {
+  grid-area: footer;
+  background-color: #ddd;
+  font-family: "Courier Prime", monospace;
+  font-family: "Pacifico", cursive;
+  height: 280px;
+  position: relative;
+}
+.footer h2 {
+  position: absolute;
+  font-size: 50px;
+  left: 100px;
+  top: 50px;
+}
+.profesionales {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-row: 100px;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  grid-gap: 10px;
+}
+.profesionales img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
